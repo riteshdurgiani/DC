@@ -10,7 +10,6 @@ client.connect((HOST, PORT))
 def receive_messages():
     while True:
         response = client.recv(1024).decode()
-        print()
         print(response)
 
 thread = threading.Thread(target=receive_messages)
